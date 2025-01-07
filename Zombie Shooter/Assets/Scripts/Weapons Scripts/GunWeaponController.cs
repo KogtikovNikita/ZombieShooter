@@ -24,18 +24,25 @@ public class GunWeaponController : WeaponController {
         switch (nameWp)
         {
 			case NameWeapon.PISTOL:
+				print("Fired from PISTOL");
 				break;
 			case NameWeapon.MP5:
+				print("Fired from MP5");
 				break;
 			case NameWeapon.M3:
+				print("Fired from M3");
 				break;
 			case NameWeapon.AK:
+				print("Fired from AK47");
 				break;
 			case NameWeapon.AWP:
+				print("Fired from SNIPER");
 				break;
 			case NameWeapon.FIRE:
+				print("Fired from FIRE");
 				break;
 			case NameWeapon.ROCKET:
+				print("Fired from ROCKET LAUNCHER");
 				break;
 
 		}
