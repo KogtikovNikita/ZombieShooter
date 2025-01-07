@@ -35,6 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4093597887402686}
   - component: {fileID: 212141066846433732}
+  - component: {fileID: 114312231531398858}
   m_Layer: 0
   m_Name: ArmR1
   m_TagString: Untagged
@@ -214,6 +215,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4030659234184396}
   - component: {fileID: 212441262185424998}
+  - component: {fileID: 114477144398531858}
   m_Layer: 0
   m_Name: ArmL1
   m_TagString: Untagged
@@ -462,6 +464,8 @@ GameObject:
   - component: {fileID: 50554708185400432}
   - component: {fileID: 114508299878917722}
   - component: {fileID: 114688233435124840}
+  - component: {fileID: 114747696071798114}
+  - component: {fileID: 114048703769745284}
   m_Layer: 0
   m_Name: Tommy
   m_TagString: Untagged
@@ -1100,6 +1104,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114048703769745284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1940654426450688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da0421a80bd05c4599ebb05b3d875b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canShoot: 0
 --- !u!114 &114253170211002988
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1126,6 +1142,19 @@ MonoBehaviour:
   bulletPrefab: {fileID: 0}
   fx_Shot: {fileID: 198098331206237420}
   fx_BulletFall: {fileID: 0}
+--- !u!114 &114312231531398858
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1106608560284970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6db93f566e065149afb3f09ab58450d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oneHandSprite: {fileID: 21300000, guid: 3383c3b1e948d734fbb2371382630c7f, type: 3}
+  twoHandSprite: {fileID: 21300000, guid: 5d7356e039d1b5d48b06ec34b4457624, type: 3}
 --- !u!114 &114357668500820638
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1178,6 +1207,19 @@ MonoBehaviour:
   bulletPrefab: {fileID: 0}
   fx_Shot: {fileID: 198098331206237420}
   fx_BulletFall: {fileID: 0}
+--- !u!114 &114477144398531858
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1502831322217258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6db93f566e065149afb3f09ab58450d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oneHandSprite: {fileID: 21300000, guid: 5a9a7cac49e75d84493eb9559895e531, type: 3}
+  twoHandSprite: {fileID: 21300000, guid: 3cce38d0e6290564485033f8e149e3af, type: 3}
 --- !u!114 &114486267839509854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1248,6 +1290,28 @@ MonoBehaviour:
   bulletPrefab: {fileID: 0}
   fx_Shot: {fileID: 198071948865950696}
   fx_BulletFall: {fileID: 0}
+--- !u!114 &114747696071798114
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1940654426450688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77ae1026c6f64a3468cbf5b4c9bcb31d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponsUnlocked: []
+  totalWeapons:
+  - {fileID: 114486267839509854}
+  - {fileID: 114445654861426194}
+  - {fileID: 114253170211002988}
+  - {fileID: 114782420089785300}
+  - {fileID: 114357668500820638}
+  - {fileID: 114885102206563930}
+  - {fileID: 114702626670236390}
+  - {fileID: 114830683826308208}
+  currentWeapon: {fileID: 0}
 --- !u!114 &114782420089785300
 MonoBehaviour:
   m_ObjectHideFlags: 1
