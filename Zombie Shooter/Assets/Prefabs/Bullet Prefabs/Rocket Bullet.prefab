@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4775774515252858}
   - component: {fileID: 212368803604142754}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gun_line1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4542835980927696}
   - component: {fileID: 198678910167363720}
   - component: {fileID: 199672580761545944}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,8 @@ GameObject:
   - component: {fileID: 4229549533109418}
   - component: {fileID: 50640083152498850}
   - component: {fileID: 61826637056474446}
-  m_Layer: 11
+  - component: {fileID: 114526270799251592}
+  m_Layer: 9
   m_Name: Rocket Bullet
   m_TagString: RocketMissile
   m_Icon: {fileID: 0}
@@ -147,6 +148,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.46, y: 0.15}
   m_EdgeRadius: 0
+--- !u!114 &114526270799251592
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1739962910200440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c043e104c308645bd93b3cdd3023a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  rocketExplosion: {fileID: 0}
 --- !u!198 &198678910167363720
 ParticleSystem:
   m_ObjectHideFlags: 1

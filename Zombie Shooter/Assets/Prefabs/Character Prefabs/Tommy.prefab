@@ -466,7 +466,7 @@ GameObject:
   - component: {fileID: 114688233435124840}
   - component: {fileID: 114747696071798114}
   - component: {fileID: 114048703769745284}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tommy
   m_TagString: Untagged
   m_Icon: {fileID: 0}

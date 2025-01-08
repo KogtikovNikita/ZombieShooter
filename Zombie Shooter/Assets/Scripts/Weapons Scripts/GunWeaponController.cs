@@ -11,7 +11,7 @@ public class GunWeaponController : WeaponController {
 	public GameObject fx_BulletFall;
 
 	private Collider2D fireCollider;
-	private WaitForSeconds wait_Time = new WaitForSeconds(0.2f);
+	private WaitForSeconds wait_Time = new WaitForSeconds(0.02f);
 	private WaitForSeconds fire_ColliderWait = new WaitForSeconds(0.02f);
 
 
