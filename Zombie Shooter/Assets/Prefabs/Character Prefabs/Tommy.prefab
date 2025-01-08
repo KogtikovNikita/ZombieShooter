@@ -1139,9 +1139,11 @@ MonoBehaviour:
   currentBullet: 0
   bulletMax: 210
   spawnPoint: {fileID: 4535471344029710}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 1300845518915976, guid: baf8443ee965a344ebdc125e67b16d69,
+    type: 2}
   fx_Shot: {fileID: 198098331206237420}
-  fx_BulletFall: {fileID: 0}
+  fx_BulletFall: {fileID: 1653980839925860, guid: 9645a125a9c82ca47af1e7c0fac14c23,
+    type: 2}
 --- !u!114 &114312231531398858
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1178,9 +1180,11 @@ MonoBehaviour:
   currentBullet: 0
   bulletMax: 160
   spawnPoint: {fileID: 4383267553535006}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 1300845518915976, guid: baf8443ee965a344ebdc125e67b16d69,
+    type: 2}
   fx_Shot: {fileID: 198942299686448236}
-  fx_BulletFall: {fileID: 0}
+  fx_BulletFall: {fileID: 1653980839925860, guid: 9645a125a9c82ca47af1e7c0fac14c23,
+    type: 2}
 --- !u!114 &114445654861426194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1204,9 +1208,11 @@ MonoBehaviour:
   currentBullet: 0
   bulletMax: 120
   spawnPoint: {fileID: 4535471344029710}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 1300845518915976, guid: baf8443ee965a344ebdc125e67b16d69,
+    type: 2}
   fx_Shot: {fileID: 198098331206237420}
-  fx_BulletFall: {fileID: 0}
+  fx_BulletFall: {fileID: 1653980839925860, guid: 9645a125a9c82ca47af1e7c0fac14c23,
+    type: 2}
 --- !u!114 &114477144398531858
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1335,9 +1341,11 @@ MonoBehaviour:
   currentBullet: 0
   bulletMax: 20
   spawnPoint: {fileID: 4383267553535006}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 1300845518915976, guid: baf8443ee965a344ebdc125e67b16d69,
+    type: 2}
   fx_Shot: {fileID: 198942299686448236}
-  fx_BulletFall: {fileID: 0}
+  fx_BulletFall: {fileID: 1653980839925860, guid: 9645a125a9c82ca47af1e7c0fac14c23,
+    type: 2}
 --- !u!114 &114830683826308208
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1361,9 +1369,11 @@ MonoBehaviour:
   currentBullet: 0
   bulletMax: 10
   spawnPoint: {fileID: 4535471344029710}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 1739962910200440, guid: da30fc0043983044796f841c8cda6339,
+    type: 2}
   fx_Shot: {fileID: 198098331206237420}
-  fx_BulletFall: {fileID: 0}
+  fx_BulletFall: {fileID: 1653980839925860, guid: 9645a125a9c82ca47af1e7c0fac14c23,
+    type: 2}
 --- !u!114 &114885102206563930
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1387,9 +1397,11 @@ MonoBehaviour:
   currentBullet: 0
   bulletMax: 15
   spawnPoint: {fileID: 4383267553535006}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 1300845518915976, guid: baf8443ee965a344ebdc125e67b16d69,
+    type: 2}
   fx_Shot: {fileID: 198942299686448236}
-  fx_BulletFall: {fileID: 0}
+  fx_BulletFall: {fileID: 1653980839925860, guid: 9645a125a9c82ca47af1e7c0fac14c23,
+    type: 2}
 --- !u!198 &198044293377440234
 ParticleSystem:
   m_ObjectHideFlags: 1

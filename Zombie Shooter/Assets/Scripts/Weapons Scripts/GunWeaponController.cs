@@ -16,7 +16,29 @@ public class GunWeaponController : WeaponController {
 
 
 	void Start () {
-		
+
+		if (!GameplayController.instance.bulletAndbulletCreated)
+        {
+			GameplayController.instance.bulletAndbulletCreated = true;
+			if(nameWp != NameWeapon.FIRE && nameWp != NameWeapon.ROCKET)
+			{
+				SmartPool.instance.CreateBulletAndBulletFall(bulletPrefab, fx_BulletFall, 100);
+			}
+
+        }
+
+		if(!GameplayController.instance.rockerBulletCreated)
+        {
+			if(nameWp == NameWeapon.ROCKET)
+            {
+				GameplayController.instance.rockerBulletCreated = true;
+				SmartPool.instance.CreateRocket(bulletPrefab, 100);
+            }
+        }
+
+
+
+
 	}
 
     public override void ProcessAttack()
@@ -24,30 +46,44 @@ public class GunWeaponController : WeaponController {
         switch (nameWp)
         {
 			case NameWeapon.PISTOL:
-				print("Fired from PISTOL");
 				break;
 			case NameWeapon.MP5:
-				print("Fired from MP5");
 				break;
 			case NameWeapon.M3:
-				print("Fired from M3");
 				break;
 			case NameWeapon.AK:
-				print("Fired from AK47");
 				break;
 			case NameWeapon.AWP:
-				print("Fired from SNIPER");
 				break;
 			case NameWeapon.FIRE:
-				print("Fired from FIRE");
 				break;
 			case NameWeapon.ROCKET:
-				print("Fired from ROCKET LAUNCHER");
 				break;
 
 		}
 
 		// SPAWN BULLET
+		if((transform != null) && (nameWp != NameWeapon.FIRE))
+        {
+			if(nameWp != NameWeapon.ROCKET)
+            {
+				GameObject bulletFallFx = SmartPool.instance.SpawnBulletFallFx(spawnPoint.transform.position,
+					Quaternion.identity);
+
+				bulletFallFx.transform.localScale = (transform.root.eulerAngles.y > 1.0f) ? new Vector3(-1f, 1f, 1f) :
+					new Vector3(1f, 1f, 1f);
+
+
+				StartCoroutine(WaitForShootEffect());
+            }
+			SmartPool.instance.SpawnBullet(spawnPoint.transform.position, 
+				new Vector3(-transform.root.localScale.x, 0f, 0f),
+				spawnPoint.rotation, nameWp);
+        }
+		else
+        {
+			StartCoroutine(ActivateFireCollider());
+        }
 
     } 
 
@@ -59,9 +95,12 @@ public class GunWeaponController : WeaponController {
 
 	IEnumerator ActivateFireCollider()
     {
-		fireCollider.enabled = true;
+		//fireCollider.enabled = true;
+
+		fx_Shot.Play();
+
 		yield return fire_ColliderWait;
-		fireCollider.enabled = false;
+		//fireCollider.enabled = false;
     }
 
 }

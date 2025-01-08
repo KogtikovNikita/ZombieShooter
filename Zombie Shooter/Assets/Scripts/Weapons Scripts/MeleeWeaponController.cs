@@ -7,6 +7,5 @@ public class MeleeWeaponController : WeaponController {
     public override void ProcessAttack()
     {
         //base.ProcessAttack();
-        print("Fired from MELEE");
     }
 }
