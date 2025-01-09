@@ -65,6 +65,9 @@
      <Compile Include="Assets\Scripts\Weapons Scripts\WeaponConfig.cs" />
      <Compile Include="Assets\Scripts\Weapons Scripts\WeaponController.cs" />
      <Compile Include="Assets\Scripts\Weapons Scripts\WeaponManager.cs" />
+     <Compile Include="Assets\Scripts\Zombie Scripts\ZombieAnimation.cs" />
+     <Compile Include="Assets\Scripts\Zombie Scripts\ZombieController.cs" />
+     <Compile Include="Assets\Scripts\Zombie Scripts\ZombieMovement.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/kogti/OneDrive/Desktop/Unity/Section 6/Zombie Shooter/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
