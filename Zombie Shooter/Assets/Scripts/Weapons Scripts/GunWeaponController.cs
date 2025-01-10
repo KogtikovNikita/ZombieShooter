@@ -36,6 +36,11 @@ public class GunWeaponController : WeaponController {
             }
         }
 
+		if(nameWp == NameWeapon.FIRE)
+        {
+			fireCollider = spawnPoint.GetComponent<BoxCollider2D>();
+        }
+
 
 
 
@@ -95,12 +100,12 @@ public class GunWeaponController : WeaponController {
 
 	IEnumerator ActivateFireCollider()
     {
-		//fireCollider.enabled = true;
+		fireCollider.enabled = true;
 
 		fx_Shot.Play();
 
 		yield return fire_ColliderWait;
-		//fireCollider.enabled = false;
+		fireCollider.enabled = false;
     }
 
 }

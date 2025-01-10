@@ -9,6 +9,7 @@ TagManager:
   - RocketMissile
   - PlayerHealth
   - Bullet
+  - FireBullet
   layers:
   - Default
   - TransparentFX

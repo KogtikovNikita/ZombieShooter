@@ -77,6 +77,21 @@ public class ZombieController : MonoBehaviour {
 		gameObject.SetActive(false);
     }
 
+	public void DealDamage(int damage)
+    {
+		zombieAnimation.Hurt();
+
+		zombieHealth -= damage;
+
+		if (zombieHealth <=0)
+        {
+			zombieAlive = false;
+			zombieAnimation.Dead();
+
+			StartCoroutine(DeactivateZombie());
+		}
+
+    }
 
 	void OnTriggerEnter2D(Collider2D target)
     {
@@ -104,7 +119,24 @@ public class ZombieController : MonoBehaviour {
 				StartCoroutine(DeactivateZombie());
             }
 
+			
+
 			target.gameObject.SetActive(false);
+        }
+		if(target.tag == TagManager.FIRE_BULLET_TAG)
+        {
+			zombieAnimation.Hurt();
+
+			zombieHealth -= fireDamage;
+
+			if (zombieHealth <= 0)
+            {
+				zombieAlive = false;
+
+				zombieAnimation.Dead();
+				StartCoroutine(DeactivateZombie());
+
+			}
         }
     }
 
