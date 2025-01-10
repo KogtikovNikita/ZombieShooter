@@ -90,6 +90,7 @@ public class SmartPool : MonoBehaviour {
 					bulletPrefabs[i].GetComponent<BulletController>().SetDirection(direction);
 
 					// SET BULLET DAMAGE
+					SetBulletDamage(weaponName, bulletPrefabs[i]);
 
 					break;
                 }
@@ -111,11 +112,39 @@ public class SmartPool : MonoBehaviour {
 
 
 					// SET BULLET DAMAGE
+					SetBulletDamage(weaponName, rocketBulletPrefabs[i]);
 
 					break;
 				}
 			}
         }
+
+    }
+
+
+	void SetBulletDamage(NameWeapon weaponName, GameObject bullet)
+    {
+        switch (weaponName)
+        {
+			case NameWeapon.PISTOL:
+				bullet.GetComponent<BulletController>().damage = 2;
+				break;
+			case NameWeapon.MP5:
+				bullet.GetComponent<BulletController>().damage = 3;
+				break;
+			case NameWeapon.M3:
+				bullet.GetComponent<BulletController>().damage = 4;
+				break;
+			case NameWeapon.AK:
+				bullet.GetComponent<BulletController>().damage = 5;
+				break;
+			case NameWeapon.AWP:
+				bullet.GetComponent<BulletController>().damage = 10;
+				break;
+			case NameWeapon.ROCKET:
+				bullet.GetComponent<BulletController>().damage = 10;
+				break;
+		}
 
     }
 }

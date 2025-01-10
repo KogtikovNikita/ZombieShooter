@@ -54,4 +54,9 @@ public class BulletController : MonoBehaviour {
 		gameObject.SetActive(false);
 
     }
+
+	public void ExplosionFX()
+    {
+		Instantiate(rocketExplosion, transform.position, Quaternion.identity);
+    }
 }

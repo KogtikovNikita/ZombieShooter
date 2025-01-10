@@ -44,7 +44,7 @@ public class ZombieController : MonoBehaviour {
         {
 			if(Vector3.Distance(targetTransform.position, transform.position) > 1.5f)
             {
-				zombieMovement.Move(targetTransform);
+				//zombieMovement.Move(targetTransform);
             }
             else
             {
@@ -56,6 +56,27 @@ public class ZombieController : MonoBehaviour {
         }
     }
 
+	public void ActivateDeadEffect(int index)
+    {
+		fxDead[index].SetActive(true);
+
+		if (fxDead[index].GetComponent<ParticleSystem>())
+        {
+			fxDead[index].GetComponent<ParticleSystem>().Play();
+
+		}
+    }
+
+
+	IEnumerator DeactivateZombie()
+    {
+		yield return new WaitForSeconds(5f);
+
+		//Instantiate(coinCollectable, transform.position, Quaternion.identity);
+
+		gameObject.SetActive(false);
+    }
+
 
 	void OnTriggerEnter2D(Collider2D target)
     {
@@ -63,6 +84,27 @@ public class ZombieController : MonoBehaviour {
 			target.tag == TagManager.FENCE_TAG)
         {
 			canAttack = true;
+        }
+
+		if (target.tag == TagManager.BULLET_TAG || target.tag == TagManager.ROCKET_MISSILE_TAG)
+        {
+			zombieAnimation.Hurt();
+			zombieHealth -= target.gameObject.GetComponent<BulletController>().damage;
+
+			if (target.tag == TagManager.ROCKET_MISSILE_TAG)
+            {
+				target.gameObject.GetComponent<BulletController>().ExplosionFX();
+            }
+
+			if (zombieHealth <= 0)
+            {
+				zombieAlive = false;
+				zombieAnimation.Dead();
+
+				StartCoroutine(DeactivateZombie());
+            }
+
+			target.gameObject.SetActive(false);
         }
     }
 

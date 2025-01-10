@@ -160,7 +160,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
-  rocketExplosion: {fileID: 0}
+  rocketExplosion: {fileID: 1777957916110860, guid: b1038453f36cc41c584473fd83977860,
+    type: 2}
 --- !u!198 &198678910167363720
 ParticleSystem:
   m_ObjectHideFlags: 1

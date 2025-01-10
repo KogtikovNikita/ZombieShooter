@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4315238006892254}
   - component: {fileID: 198295052115428008}
   - component: {fileID: 199841336029886190}
+  - component: {fileID: 114735590288994422}
   m_Layer: 0
   m_Name: Missile Explosion
   m_TagString: Untagged
@@ -52,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1777957916110860}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8807448, y: -3.290204, z: 0}
+  m_LocalPosition: {x: 1.6452465, y: -1.0318885, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4434033050985562}
@@ -72,6 +73,17 @@ Transform:
   m_Father: {fileID: 4315238006892254}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114735590288994422
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1777957916110860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fac958e8ce7edf4c8a63b0069f5a559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198295052115428008
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -84,7 +96,7 @@ ParticleSystem:
   stopAction: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -4582,7 +4594,7 @@ ParticleSystem:
   stopAction: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -9003,8 +9015,8 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 24465bcbed6e94288a334e509dc19387, type: 2}
-  - {fileID: 2100000, guid: 24465bcbed6e94288a334e509dc19387, type: 2}
+  - {fileID: 2100000, guid: e01d1120880f743c5bcbf1c3f5185e41, type: 2}
+  - {fileID: 2100000, guid: e01d1120880f743c5bcbf1c3f5185e41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9021,8 +9033,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1080857271
-  m_SortingLayer: 0
+  m_SortingLayerID: 683089433
+  m_SortingLayer: 3
   m_SortingOrder: 10
   m_RenderMode: 0
   m_SortMode: 0
@@ -9059,8 +9071,8 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 77c42a7a6abf342c9b51013bdf5c09d9, type: 2}
-  - {fileID: 2100000, guid: 77c42a7a6abf342c9b51013bdf5c09d9, type: 2}
+  - {fileID: 2100000, guid: e01d1120880f743c5bcbf1c3f5185e41, type: 2}
+  - {fileID: 2100000, guid: e01d1120880f743c5bcbf1c3f5185e41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9077,8 +9089,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1080857271
-  m_SortingLayer: 0
+  m_SortingLayerID: 683089433
+  m_SortingLayer: 3
   m_SortingOrder: 11
   m_RenderMode: 0
   m_SortMode: 0

@@ -8,6 +8,7 @@ TagManager:
   - ZombieHealth
   - RocketMissile
   - PlayerHealth
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - 
   - Player
   - Bullet
-  - 
+  - ZombieHealth
   - 
   - 
   - 

@@ -65,6 +65,8 @@
      <Compile Include="Assets\Scripts\Weapons Scripts\WeaponConfig.cs" />
      <Compile Include="Assets\Scripts\Weapons Scripts\WeaponController.cs" />
      <Compile Include="Assets\Scripts\Weapons Scripts\WeaponManager.cs" />
+     <Compile Include="Assets\Scripts\Zombie Scripts\SetStateSMB.cs" />
+     <Compile Include="Assets\Scripts\Zombie Scripts\SMZombieDead.cs" />
      <Compile Include="Assets\Scripts\Zombie Scripts\ZombieAnimation.cs" />
      <Compile Include="Assets\Scripts\Zombie Scripts\ZombieController.cs" />
      <Compile Include="Assets\Scripts\Zombie Scripts\ZombieMovement.cs" />

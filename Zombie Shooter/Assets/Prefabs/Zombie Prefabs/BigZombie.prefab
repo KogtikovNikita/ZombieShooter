@@ -219,7 +219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 435110}
   - component: {fileID: 6166590}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: HealthCollider
   m_TagString: ZombieHealth
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
@@ -774,7 +774,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184972}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1735673, y: -1.7683265, z: 0}
+  m_LocalPosition: {x: 5.23, y: -1.7683265, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400302}
@@ -47404,6 +47404,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1181fe80abe9f6e4a8d95d3726fc2aa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageCollider: {fileID: 0}
+  zombieHealth: 10
+  fxDead:
+  - {fileID: 178502}
+  - {fileID: 191432}
+  - {fileID: 178502}
+  coinCollectable: {fileID: 0}
 --- !u!212 &212000010038884626
 SpriteRenderer:
   m_ObjectHideFlags: 1
