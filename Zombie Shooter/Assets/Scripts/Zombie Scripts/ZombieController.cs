@@ -27,7 +27,16 @@ public class ZombieController : MonoBehaviour {
 		zombieAnimation = GetComponent<ZombieAnimation>();
 
 		zombieAlive = true;
-		targetTransform = GameObject.FindGameObjectWithTag(TagManager.PLAYER_TAG).transform;
+		if (GameplayController.instance.zombieGoal == ZombieGoal.PLAYER)
+		{
+			targetTransform = GameObject.FindGameObjectWithTag(TagManager.PLAYER_TAG).transform;
+		}
+		else if(GameplayController.instance.zombieGoal == ZombieGoal.FENCE)
+		{
+			GameObject[] fences = GameObject.FindGameObjectsWithTag(TagManager.FENCE_TAG);
+			targetTransform = fences[Random.Range(0, fences.Length)].transform;
+		}
+
 	}
 	
 	// Update is called once per frame

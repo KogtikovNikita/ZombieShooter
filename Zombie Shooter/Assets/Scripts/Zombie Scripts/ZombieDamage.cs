@@ -11,7 +11,10 @@ public class ZombieDamage : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		AttackPlayer();
+		if(GameplayController.instance.zombieGoal == ZombieGoal.PLAYER)
+			AttackPlayer();
+		if(GameplayController.instance.zombieGoal == ZombieGoal.FENCE)
+			AttackFence();
 	}
 
 	void AttackPlayer()
@@ -30,4 +33,19 @@ public class ZombieDamage : MonoBehaviour {
 
     }
 
+
+	void AttackFence()
+    {
+		if(!GameplayController.instance.fenceDestroyed)
+        {
+			Collider2D target = Physics2D.OverlapCircle(transform.position, radius, collisionLayer);
+			if(target.tag == TagManager.FENCE_TAG)
+			{
+				target.GetComponent<FenceHealth>().DealDamage(damage);
+				gameObject.transform.root.GetComponent<ZombieController>().DeactivateDamagePoint();
+			}
+        }
+
+
+    }
 }

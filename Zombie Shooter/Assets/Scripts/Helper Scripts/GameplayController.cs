@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum ZombieGoal
+{
+    PLAYER,
+    FENCE
+}
+
+
 public class GameplayController : MonoBehaviour {
 
     public static GameplayController instance;
@@ -11,7 +18,9 @@ public class GameplayController : MonoBehaviour {
     public bool bulletAndbulletCreated, rockerBulletCreated;
 
     [HideInInspector]
-    public bool playerAlive;
+    public bool playerAlive, fenceDestroyed;
+
+    public ZombieGoal zombieGoal = ZombieGoal.PLAYER;
 
     private void Awake()
     {
