@@ -9,6 +9,18 @@ public enum ZombieGoal
 }
 
 
+public enum GameGoal
+{
+    KILL_ZOMBIES,
+    WALK_TO_GOAL_STEPS,
+    DEFEND_FENCE,
+    TIMER_COUNTDOWN,
+    GAME_OVER
+
+}
+
+
+
 public class GameplayController : MonoBehaviour {
 
     public static GameplayController instance;
@@ -22,6 +34,7 @@ public class GameplayController : MonoBehaviour {
 
     public ZombieGoal zombieGoal = ZombieGoal.PLAYER;
 
+    public GameGoal gameGoal = GameGoal.DEFEND_FENCE;
     private void Awake()
     {
         Makeinstance();
