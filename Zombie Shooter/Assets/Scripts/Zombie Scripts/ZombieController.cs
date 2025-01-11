@@ -44,7 +44,7 @@ public class ZombieController : MonoBehaviour {
         {
 			if(Vector3.Distance(targetTransform.position, transform.position) > 1.5f)
             {
-				//zombieMovement.Move(targetTransform);
+				zombieMovement.Move(targetTransform);
             }
             else
             {
@@ -91,6 +91,16 @@ public class ZombieController : MonoBehaviour {
 			StartCoroutine(DeactivateZombie());
 		}
 
+    }
+
+	public void ActivateDamagePoint()
+    {
+		damageCollider.SetActive(true);
+    }
+
+	public void DeactivateDamagePoint()
+    {
+		damageCollider.SetActive(false);
     }
 
 	void OnTriggerEnter2D(Collider2D target)

@@ -10,9 +10,17 @@ public class GameplayController : MonoBehaviour {
     [HideInInspector]
     public bool bulletAndbulletCreated, rockerBulletCreated;
 
+    [HideInInspector]
+    public bool playerAlive;
+
     private void Awake()
     {
         Makeinstance();
+    }
+
+    void Start()
+    {
+        playerAlive = true;
     }
 
     void  OnDisable()

@@ -444,7 +444,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4400038500744942}
   - component: {fileID: 61088089864564168}
-  m_Layer: 10
+  - component: {fileID: 114881841993688860}
+  m_Layer: 11
   m_Name: Health
   m_TagString: PlayerHealth
   m_Icon: {fileID: 0}
@@ -1447,6 +1448,21 @@ MonoBehaviour:
   fx_Shot: {fileID: 198098331206237420}
   fx_BulletFall: {fileID: 1653980839925860, guid: 9645a125a9c82ca47af1e7c0fac14c23,
     type: 2}
+--- !u!114 &114881841993688860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1874862284142052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48a8c02d04d94c5428deb4440069673d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  bloodFx:
+  - {fileID: 1857908598476958}
+  - {fileID: 1992501146012200}
 --- !u!114 &114885102206563930
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -47286,6 +47286,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4640115041625994}
+  - component: {fileID: 114618135052808192}
   m_Layer: 0
   m_Name: Damage Point
   m_TagString: Untagged
@@ -47393,6 +47394,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba2b86ac661653f4b9af5df17d9a66a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114618135052808192
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1852009596050652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d01ef43ac91564bbc7c6ef79502cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  radius: 1
+  damage: 3
 --- !u!114 &114695488283127550
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -47404,7 +47421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1181fe80abe9f6e4a8d95d3726fc2aa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageCollider: {fileID: 0}
+  damageCollider: {fileID: 1852009596050652}
   zombieHealth: 10
   fxDead:
   - {fileID: 178502}
