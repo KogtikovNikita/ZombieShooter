@@ -81,6 +81,8 @@ public class ZombieController : MonoBehaviour {
     {
 		yield return new WaitForSeconds(5f);
 
+		GameplayController.instance.ZombieDied();
+
 		//Instantiate(coinCollectable, transform.position, Quaternion.identity);
 
 		gameObject.SetActive(false);
