@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public enum ZombieGoal
 {
@@ -193,6 +194,10 @@ public class GameplayController : MonoBehaviour {
         pausePanel.SetActive(false);
     }
 
+    public void QuitGame()
+    {
+        SceneManager.LoadScene(TagManager.MAIN_MENU_NAME);
+    }
 
 
 }

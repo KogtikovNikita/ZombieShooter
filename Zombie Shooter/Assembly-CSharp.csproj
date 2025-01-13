@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\FX Scripts\DeactivateFx.cs" />
      <Compile Include="Assets\Scripts\FX Scripts\SmartPool.cs" />
      <Compile Include="Assets\Scripts\Helper Scripts\GameplayController.cs" />
+     <Compile Include="Assets\Scripts\Helper Scripts\MainMenuController.cs" />
      <Compile Include="Assets\Scripts\Helper Scripts\TagManager.cs" />
      <Compile Include="Assets\Scripts\Player Scripts\PlayerAnimations.cs" />
      <Compile Include="Assets\Scripts\Player Scripts\PlayerArmController.cs" />

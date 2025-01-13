@@ -29,7 +29,12 @@ public class TagManager : MonoBehaviour {
     public static string RANDOM_PARAMETER = "Random";
     public static string ZOMBIE_MOVE_ANIMATION = "Move";
 
-
+    // LEVEL NAMES
+    public static string LEVEL_1_NAME = "Gameplay 1";
+    public static string LEVEL_2_NAME = "Gameplay 2";
+    public static string LEVEL_3_NAME = "Gameplay 3";
+    public static string LEVEL_4_NAME = "Gameplay 4";
+    public static string MAIN_MENU_NAME = "MainMenu";
 
 
 
