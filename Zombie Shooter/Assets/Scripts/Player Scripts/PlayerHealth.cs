@@ -29,7 +29,7 @@ public class PlayerHealth : MonoBehaviour {
         {
 
 			GameplayController.instance.playerAlive = false;
-
+			print("Game Over");
 			GetComponent<Collider2D>().enabled = false;
 
 			playerAnim.Dead();

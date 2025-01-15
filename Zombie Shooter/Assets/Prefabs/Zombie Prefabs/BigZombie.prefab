@@ -47407,7 +47407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
   radius: 1
   damage: 3
 --- !u!114 &114695488283127550

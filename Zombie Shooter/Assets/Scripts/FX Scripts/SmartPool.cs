@@ -10,13 +10,23 @@ public class SmartPool : MonoBehaviour {
 	private List<GameObject> bulletPrefabs = new List<GameObject>();
 	private List<GameObject> rocketBulletPrefabs = new List<GameObject>();
 
+	public GameObject[] zombies;
+	private float ySpawnPosMin = -3.7f, ySpawnPosMax = -0.36f;
 
+	private Camera mainCamera;
 
-	void Start () {
+	void Start()
+    {
+		mainCamera = Camera.main;
+		InvokeRepeating("StartSpawningZombies", 1f, Random.Range(1f, 5f));
+
+    }
+
+	void Awake () {
 		MakeInstance();
 	}
 	
-	void Disable()
+	void OnDisable()
     {
 		instance = null;
     }
@@ -146,5 +156,42 @@ public class SmartPool : MonoBehaviour {
 				break;
 		}
 
+    }
+
+	void StartSpawningZombies()
+    {
+		if (GameplayController.instance.gameGoal == GameGoal.DEFEND_FENCE)
+        {
+			float xPos = mainCamera.transform.position.x;
+			xPos += 15f;
+
+			float yPos = Random.Range(ySpawnPosMin, ySpawnPosMax);
+
+			Instantiate(zombies[Random.Range(0, zombies.Length)], new Vector3(xPos, yPos, 0f), Quaternion.identity);
+
+        }
+		if (GameplayController.instance.gameGoal == GameGoal.KILL_ZOMBIES || 
+			GameplayController.instance.gameGoal == GameGoal.TIMER_COUNTDOWN ||
+			GameplayController.instance.gameGoal == GameGoal.WALK_TO_GOAL_STEPS)
+        {
+			float xPos = mainCamera.transform.position.x;
+
+			if(Random.Range(0,2) > 0)
+            {
+				xPos += Random.Range(10f, 15f);
+            }
+			else
+            {
+				xPos -= Random.Range(10f, 15f);
+            }
+
+			float yPos = Random.Range(ySpawnPosMin, ySpawnPosMax);
+
+			Instantiate(zombies[Random.Range(0, zombies.Length)], new Vector3(xPos, yPos, 0f), Quaternion.identity);
+		}
+		if(GameplayController.instance.gameGoal == GameGoal.GAME_OVER)
+        {
+			CancelInvoke("StartSpawningZombies");
+        }
     }
 }

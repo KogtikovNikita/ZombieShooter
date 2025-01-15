@@ -26,6 +26,9 @@ GameObject:
   - component: {fileID: 9531952}
   - component: {fileID: 5011356}
   - component: {fileID: 6128634}
+  - component: {fileID: 114650704465926572}
+  - component: {fileID: 114907303127606588}
+  - component: {fileID: 114351068612799462}
   m_Layer: 9
   m_Name: LightZombie
   m_TagString: Enemy
@@ -47267,6 +47270,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4869117784363392}
+  - component: {fileID: 114633299069973344}
   m_Layer: 0
   m_Name: Damage Point
   m_TagString: Untagged
@@ -47368,6 +47372,62 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 0.12}
   m_EdgeRadius: 0
+--- !u!114 &114351068612799462
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba2b86ac661653f4b9af5df17d9a66a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114633299069973344
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1471351156754294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d01ef43ac91564bbc7c6ef79502cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  radius: 1
+  damage: 3
+--- !u!114 &114650704465926572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92dfd018b7ee3de48905da090ccb0e88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114907303127606588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1181fe80abe9f6e4a8d95d3726fc2aa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageCollider: {fileID: 1471351156754294}
+  zombieHealth: 10
+  fxDead:
+  - {fileID: 131304}
+  - {fileID: 166776}
+  - {fileID: 131304}
+  coinCollectable: {fileID: 0}
 --- !u!212 &212000010108082840
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -47400,8 +47460,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1080857271
-  m_SortingLayer: 0
+  m_SortingLayerID: 683089433
+  m_SortingLayer: 3
   m_SortingOrder: 11
   m_Sprite: {fileID: 21300000, guid: 1f9abe49ae757490a9309c1e0f41de6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

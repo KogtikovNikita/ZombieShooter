@@ -1473,7 +1473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a8c02d04d94c5428deb4440069673d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 100
   bloodFx:
   - {fileID: 1857908598476958}
   - {fileID: 1992501146012200}
