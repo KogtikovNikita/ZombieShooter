@@ -18,6 +18,8 @@ public class ZombieSpawner : MonoBehaviour {
 
 		fxShred.SetActive(true);
 
+		AudioManager.instance.ZombieRiseSound();
+
 		zombie = Instantiate(zombiePrefab, spawnPoint.position, Quaternion.identity);
 
 		if (zombie.transform.position.x < player.position.x)

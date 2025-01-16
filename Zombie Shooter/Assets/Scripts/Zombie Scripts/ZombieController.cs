@@ -60,6 +60,15 @@ public class ZombieController : MonoBehaviour {
 				if(canAttack)
                 {
 					zombieAnimation.Attack();
+
+
+					timerAttack += Time.deltaTime;
+					if(timerAttack > 0.45f)
+                    {
+						timerAttack = 0;
+						AudioManager.instance.ZombieAttackSound();
+                    }
+					
                 }
             }
         }
@@ -79,6 +88,8 @@ public class ZombieController : MonoBehaviour {
 
 	IEnumerator DeactivateZombie()
     {
+		AudioManager.instance.ZombieDieSound();
+
 		yield return new WaitForSeconds(5f);
 
 		GameplayController.instance.ZombieDied();

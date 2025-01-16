@@ -51,18 +51,25 @@ public class GunWeaponController : WeaponController {
         switch (nameWp)
         {
 			case NameWeapon.PISTOL:
+				AudioManager.instance.GunSound(0);
 				break;
 			case NameWeapon.MP5:
+				AudioManager.instance.GunSound(1);
 				break;
 			case NameWeapon.M3:
+				AudioManager.instance.GunSound(2);
 				break;
 			case NameWeapon.AK:
+				AudioManager.instance.GunSound(3);
 				break;
 			case NameWeapon.AWP:
+				AudioManager.instance.GunSound(4);
 				break;
 			case NameWeapon.FIRE:
+				AudioManager.instance.GunSound(5);
 				break;
 			case NameWeapon.ROCKET:
+				AudioManager.instance.GunSound(6);
 				break;
 
 		}

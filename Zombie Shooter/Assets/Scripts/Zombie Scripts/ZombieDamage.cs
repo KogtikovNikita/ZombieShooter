@@ -23,7 +23,7 @@ public class ZombieDamage : MonoBehaviour {
         {
 			Collider2D target = Physics2D.OverlapCircle(transform.position, radius, collisionLayer);
 
-			if(target.tag == TagManager.PLAYER_HEALTH_TAG)
+			if(target && target.tag == TagManager.PLAYER_HEALTH_TAG)
 			{
 				target.GetComponent<PlayerHealth>().DealDamage(damage);
 				gameObject.transform.root.GetComponent<ZombieController>().DeactivateDamagePoint();

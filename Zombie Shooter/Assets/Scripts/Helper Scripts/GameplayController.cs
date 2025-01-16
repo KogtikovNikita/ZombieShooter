@@ -120,7 +120,7 @@ public class GameplayController : MonoBehaviour {
                 stepCount--;
 
                 if (stepCount <=0)
-                    print("We made that many steps");
+                    GameOver();
                 
                 playerPrevousPosition = playerTarget.position;
                 
@@ -159,8 +159,9 @@ public class GameplayController : MonoBehaviour {
 
         if(timerCount <= 0)
         {
-            print("Game Over");
-            CancelInvoke("TimerCountDown");
+           
+            CancelInvoke("TimerCountDown"); 
+            GameOver();
         }
     }
 
@@ -172,7 +173,7 @@ public class GameplayController : MonoBehaviour {
 
         if(zombieCount <= 0)
         {
-            print("GameOver");
+            GameOver();
         }
     }
 
@@ -180,6 +181,12 @@ public class GameplayController : MonoBehaviour {
     {
         fillPercentage /= 100f;
         playerLife.fillAmount = fillPercentage;
+    }
+
+    public void GameOver()
+    {
+        gameOverPanel.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void PauseGame()
@@ -197,6 +204,7 @@ public class GameplayController : MonoBehaviour {
 
     public void QuitGame()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(TagManager.MAIN_MENU_NAME);
     }
 

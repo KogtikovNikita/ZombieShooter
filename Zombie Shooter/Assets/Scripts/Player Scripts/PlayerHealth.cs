@@ -29,11 +29,13 @@ public class PlayerHealth : MonoBehaviour {
         {
 
 			GameplayController.instance.playerAlive = false;
-			print("Game Over");
+			
 			GetComponent<Collider2D>().enabled = false;
 
 			playerAnim.Dead();
 			bloodFx[Random.Range(0, bloodFx.Length)].SetActive(true);
+
+			GameplayController.instance.GameOver();
 
         }
     }

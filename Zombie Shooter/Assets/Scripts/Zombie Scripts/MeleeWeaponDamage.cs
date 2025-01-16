@@ -13,7 +13,7 @@ public class MeleeWeaponDamage : MonoBehaviour {
     {
         Collider2D target = Physics2D.OverlapCircle(transform.position, radius, collisionLayer);
 
-        if (target.tag == TagManager.ZOMBIE_HEALTH_TAG)
+        if (target && target.tag == TagManager.ZOMBIE_HEALTH_TAG)
         {
             target.transform.root.GetComponent<ZombieController>().DealDamage(damage);
             gameObject.transform.root.GetComponent<WeaponManager>().DenyCollisionDetection();
