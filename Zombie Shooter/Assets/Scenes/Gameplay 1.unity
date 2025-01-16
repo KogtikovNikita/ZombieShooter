@@ -3426,6 +3426,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64fd47ed59aaffc418c9c3f49d38dbbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zombies:
+  - {fileID: 184972, guid: 13c9a6f4002c04238b8cb1551b68a561, type: 2}
+  - {fileID: 150340, guid: 396bf009cf9e042679b5997120dc60a4, type: 2}
+  - {fileID: 121458, guid: 284316f13ddb6448b8099641b94e45c4, type: 2}
+  - {fileID: 107902, guid: 5a0ae1bff08434441b43e8c78267dff8, type: 2}
+  - {fileID: 1163977106071414, guid: d3fb3cd0781cf4ddab0a0bd3b2a12076, type: 2}
 --- !u!4 &450027251
 Transform:
   m_ObjectHideFlags: 0
@@ -10588,7 +10594,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 184972, guid: 13c9a6f4002c04238b8cb1551b68a561, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13c9a6f4002c04238b8cb1551b68a561, type: 2}

@@ -47427,7 +47427,8 @@ MonoBehaviour:
   - {fileID: 178502}
   - {fileID: 191432}
   - {fileID: 178502}
-  coinCollectable: {fileID: 0}
+  coinCollectable: {fileID: 1626209752997490, guid: f65c85338f0d56d4cb801068bfdf2816,
+    type: 2}
 --- !u!212 &212000010038884626
 SpriteRenderer:
   m_ObjectHideFlags: 1

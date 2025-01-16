@@ -47509,7 +47509,8 @@ MonoBehaviour:
   - {fileID: 198660}
   - {fileID: 113326}
   - {fileID: 198660}
-  coinCollectable: {fileID: 0}
+  coinCollectable: {fileID: 1626209752997490, guid: f65c85338f0d56d4cb801068bfdf2816,
+    type: 2}
 --- !u!114 &114373745130002372
 MonoBehaviour:
   m_ObjectHideFlags: 1

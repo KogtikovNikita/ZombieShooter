@@ -167,7 +167,8 @@ public class GameplayController : MonoBehaviour {
     public void ZombieDied()
     {
         zombieCount--;
-        zombieCounterText.text = zombieCount.ToString();
+        if(gameGoal == GameGoal.KILL_ZOMBIES)
+            zombieCounterText.text = zombieCount.ToString();
 
         if(zombieCount <= 0)
         {

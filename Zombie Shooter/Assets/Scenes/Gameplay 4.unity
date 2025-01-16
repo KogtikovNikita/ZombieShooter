@@ -6727,7 +6727,7 @@ MonoBehaviour:
   playerAlive: 0
   fenceDestroyed: 0
   zombieGoal: 0
-  gameGoal: 1
+  gameGoal: 3
   zombieCount: 20
   timerCount: 100
   stepCount: 100
@@ -7113,6 +7113,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4668976323760658, guid: b42b779ffcec16749ac2cab240dd8290, type: 2}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940654426450688, guid: b42b779ffcec16749ac2cab240dd8290, type: 2}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

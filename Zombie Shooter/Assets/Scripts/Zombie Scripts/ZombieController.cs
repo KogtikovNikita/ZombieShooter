@@ -83,7 +83,12 @@ public class ZombieController : MonoBehaviour {
 
 		GameplayController.instance.ZombieDied();
 
-		//Instantiate(coinCollectable, transform.position, Quaternion.identity);
+
+		if (Random.Range(0, 10) > 6)
+			Instantiate(coinCollectable, transform.position, Quaternion.identity);
+        
+
+		
 
 		gameObject.SetActive(false);
     }
